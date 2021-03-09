@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+float computeTax(float s)
+{
+	float tax;
+	if (s > 70350) {
+		tax = 14325 + (0.28 * (s - 70350));
+	}
+	else if (s > 29050) {
+		tax = 4000 + (0.25 * (s - 29050));
+	}
+	else if (s > 7150) {
+		tax = 715 + (0.15 * (s - 7150));
+	}
+	else if (s > 0) {
+		tax = 0 + (0.1 * s);
+	}
+	return tax;
+}
+int main()
+{
+	float s, out;
+	cin >> s;
+	out = computeTax(s);
+	cout << out << endl;
+}
