@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+float computeAverage(int x[], int l)
+{
+	float sum = 0;
+	for (int i = 0; i < l; i++) {
+		sum += x[i];
+	}
+
+	return sum / l;
+}
+int main()
+{
+	int x[] = { 1,-2,4,-4,9,-6,16,-8,25,-10 };
+	cout << computeAverage(x, 10) << endl;
+}
