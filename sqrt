@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int sqrt(int n)
+{
+    for (int i = 1; i <= n; i++) {
+        if (i * i == n) {
+            return i;
+        }
+        if (i * i > n) {
+            return i - 1;
+        }
+    }
+    return n;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    cout << sqrt(n) << endl;
+}
