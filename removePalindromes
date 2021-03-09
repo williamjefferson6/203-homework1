@@ -1,0 +1,42 @@
+#include <algorithm> 
+#include <iostream> 
+#include <vector> 
+using namespace std;
+void removePalindromes(string a[], int l)
+{
+    for (int i = 0; i < l; i++)
+    {
+        bool p = true;
+        string word = a[i];
+        int s = word.size();
+        for (int j = 0; j < s; j++)
+        {
+            p = false;
+            if (word[j] == word[s - 1 - j])
+            {
+                p = true;
+            }
+            else if (word[j] == word[s - 1 - j] + 32)
+            {
+                p = true;
+            }
+            else if (word[j] == word[s - 1 - j] - 32)
+            {
+                p = true;
+            }
+            if (p == false) { break; }
+        }
+        if (p == true)
+        {
+            a[i] = "";
+        }
+    }
+    for (int i = 0; i < l; i++) {
+        cout << a[i] << " ";
+    }
+}
+int main()
+{
+	string a[] = { "?",""," 123  $$ ^_^ $$  321 ", "XY", " !  ", "she sells seashells" };
+	removePalindromes(a, 6);
+}
