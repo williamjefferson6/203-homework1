@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+void numberSquare(int min, int max)
+{
+	int c = 0;
+	for (int i = min; i <= max; i++) {
+		c++;
+		int x = 0;
+		for (int j = i; j < max + c; j++) {
+			if (j <= max) {
+				cout << j;
+			}
+			else {
+				cout << min + (x++);
+			}
+		}
+		cout << endl;
+	}
+}
+int main()
+{
+	int min, max;
+	cin >> min;
+	cin >> max;
+	numberSquare(min, max);
+}
