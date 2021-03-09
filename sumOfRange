@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int sumOfRange(int min, int max)
+{
+	if (min > max) {
+		return 0;
+	}
+	int sum = 0;
+	for (int i = min; i <= max; i++) {
+		sum += i;
+	}
+	return sum;
+}
+int main()
+{
+	int min, max;
+	cin >> min;
+	cin >> max;
+	cout << sumOfRange(min, max) << endl;
+}
