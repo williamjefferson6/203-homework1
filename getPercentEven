@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+float getPercentEven(int x[], int l)
+{
+	if (l == 0) {
+		return 0.0;
+	}
+	float e = 0;
+	for (int i = 0; i < l; i++) {
+		if (x[i] % 2 == 0) {
+			e++;
+		}
+	}
+	return (e / l) * 100;
+}
+int main()
+{
+	cout << getPercentEven({}, 0) << endl;
+}
