@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	float s0 = 12.0;
+	float v0 = 3.5;
+	float a = 9.8;
+	float t = 10;
+	float s = 0;
+	s = s0 + (v0 * t) + (0.5 * a * t * t);
+	cout << s << endl;
+}
