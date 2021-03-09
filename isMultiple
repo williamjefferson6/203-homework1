@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+bool isMultiple(int a, int b)
+{
+	if (a % b == 0) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+int main()
+{
+	int a, b;
+	cin >> a;
+	cin >> b;
+	cout << isMultiple(a, b) << endl;
+}
