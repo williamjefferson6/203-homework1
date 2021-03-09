@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int digitCount(int x)
+{
+	int c = 0;
+	while (x != 0) {
+		x = x / 10;
+		c++;
+	}
+	return c;
+}
+int main()
+{
+	int x;
+	cin >> x;
+	cout << digitCount(x) << endl;
+}
