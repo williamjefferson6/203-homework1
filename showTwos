@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+void showTwos(int x)
+{
+	cout << x << " = ";
+	int c = 0;
+	while (x % 2 == 0) {
+		c++;
+		x /= 2;
+	}
+	for (int i = 1; i <= c; i++) {
+		cout << "2 * ";
+	}
+	cout << x << endl;
+}
+int main()
+{
+	showTwos(7);
+	showTwos(18);
+	showTwos(68);
+	showTwos(120);
+}
