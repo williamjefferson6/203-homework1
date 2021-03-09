@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+void fitnessGoal(int goal)
+{
+	cout << "Train until you increase for " << goal << " days." << endl;
+	int m1 = 0, m2, c = 0, t = 0;
+	while (c != goal) {
+		cout << "Minutes? ";
+		cin >> m2;
+		if (m2 > m1) {
+			c++;
+			t++;
+			cout << "Great job!" << endl;
+		}
+		else {
+			c = 0;
+			t++;
+			cout << "Start over." << endl;
+		}
+		m1 = m2;
+	}
+	cout << "Reached your goal in " << t << " total days!" << endl;
+}
+int main()
+{
+	int goal;
+	cin >> goal;
+	fitnessGoal(goal);
+}
