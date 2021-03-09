@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x = 1, c = 0;
+	float sum = 0;
+	while (x != 0) {
+		if (x % 2 == 0) {
+			sum += x;
+			c++;
+		}
+		cout << "Integer? ";
+		cin >> x;
+	}
+	cout << "Average: " << sum / c << endl;
+}
