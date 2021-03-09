@@ -1,0 +1,23 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+void printPay(float s, int h)
+{
+	float t;
+	if (h > 8) {
+		t = (s * 8.00) + (1.50 * s * (h - 8.00));
+	}
+	else {
+		t = (s * h);
+	}
+	cout << "Hours worked: " << h << endl;
+	cout << "Pay earned: $" << fixed << setprecision(2) << t << endl;
+}
+int main()
+{
+	float s;
+	int h;
+	cin >> s;
+	cin >> h;
+	printPay(s, h);
+}
