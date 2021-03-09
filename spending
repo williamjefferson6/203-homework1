@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+void spending(string name)
+{
+    cout << "How much will " << name << " be spending? ";
+    double amount;
+    cin >> amount;
+    int numBills = (int)(amount / 20.0);
+    if (numBills * 20.0 < amount) {
+        numBills++;
+    }
+    cout << endl << name << " needs " << numBills << " bills" << endl;
+}
+int main()
+{
+    string name = "William";
+    spending(name);
+}
