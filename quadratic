@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+void quadratic(int a, int b, int c, double& root1, double& root2) {
+	float x = 0;
+	x = (float)(b * b) - (4 * a * c);
+	root1 = ((-b) + sqrt(x)) / float(2 * a);
+	root2 = ((-b) - sqrt(x)) / float(2 * a);
+}
+int main()
+{
+	float a, b, c, root1 = 1, root2 = 1;
+	cin >> a;
+	cin >> b;
+	cin >> c;
+	quadratic(a, b, c, root1, root2);
+}
