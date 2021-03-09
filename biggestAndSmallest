@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int n, x, big = -99999999, small = 99999999;
+	cout << "Number of numbers? ";
+	cin >> n;
+	for (int i = 1; i <= n; i++) {
+		cout << "Number " << i << ": ";
+		cin >> x;
+		if (x > big) {
+			big = x;
+		}
+		if (x < small) {
+			small = x;
+		}
+	}
+	cout << "Biggest = " << big << endl;
+	cout << "Smallest = " << small << endl;
+}
