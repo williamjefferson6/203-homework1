@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+void rangeOfNumbers(int x, int y)
+{
+	if (x < y) {
+		for (int i = x; i <= y; i++) {
+			if (i != y) {
+				cout << i << ", ";
+			}
+			else {
+				cout << i;
+			}
+		}
+	}
+	else {
+		for (int i = x; i >= y; i--) {
+			if (i != y) {
+				cout << i << ", ";
+			}
+			else {
+				cout << i;
+			}
+		}
+	}
+}
+int main()
+{
+	int x, y;
+	cin >> x;
+	cin >> y;
+	rangeOfNumbers(x, y);
+}
