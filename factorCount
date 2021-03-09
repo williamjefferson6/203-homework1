@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int factorCount(int x)
+{
+	int c = 0;
+	for (int i = x; i > 0; i--) {
+		if (x % i == 0) {
+			c++;
+		}
+	}
+	return c;
+}
+int main()
+{
+	int x, out;
+	cin >> x;
+	out = factorCount(x);
+	cout << out << endl;
+}
