@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	cout << "This program reads data for two people" << endl;
+	cout << "and computes their body mass index (BMI)" << endl << endl;
+	double h1, w1, h2, w2, BMI1, BMI2;
+	cout << "Enter Person 1's information:" << endl;
+	cout << "height (in inches)? ";
+	cin >> h1;
+	cout << "weight (in pounds)? ";
+	cin >> w1;
+
+	BMI1 = (w1 / (h1 * h1)) * 703;
+	if (BMI1 >= 30.0) {
+		cout << "BMI = " << BMI1 << ", class 4" << endl;
+	}
+	else if (BMI1 >= 25) {
+		cout << "BMI = " << BMI1 << ", class 3" << endl;
+	}
+	else if (BMI1 > 18.5) {
+		cout << "BMI = " << BMI1 << ", class 2" << endl;
+	}
+	else {
+		cout << "BMI = " << BMI1 << ", class 1" << endl;
+	}
+
+	cout << "\nEnter Person 2's information:" << endl;
+	cout << "height (in inches)? ";
+	cin >> h2;
+	cout << "weight (in pounds)? ";
+	cin >> w2;
+
+	BMI2 = (w2 / (h2 * h2))* 703;
+	if (BMI2 >= 30.0) {
+		cout << "BMI = " << BMI2 << ", class 4" << endl;
+	}
+	else if (BMI2 >= 25) {
+		cout << "BMI = " << BMI2 << ", class 3" << endl;
+	}
+	else if (BMI2 > 18.5) {
+		cout << "BMI = " << BMI2 << ", class 2" << endl;
+	}
+	else {
+		cout << "BMI = " << BMI2 << ", class 1" << endl;
+	}
+
+	if (BMI1 > BMI2) {
+		cout << "\nBMI difference = " << BMI1 - BMI2 << endl;
+	}
+	else {
+		cout << "\nBMI difference = " << BMI2 - BMI1 << endl;
+	}
+}
